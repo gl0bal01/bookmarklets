@@ -70,7 +70,7 @@ Once executed, the page will be enhanced with:
 * 🟣 **Hidden Elements**: Pink-purple background with blue border
 * ⚫ **Tag Labels**: Dark background with white bold text
 
-### Scrennshot on wayback during a ctf
+### Screenshot on wayback during a ctf
 
 ![A typical ctf Osint player](/assets/screenshots/hidden-on-wayback.jpg)
 
