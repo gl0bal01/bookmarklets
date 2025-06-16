@@ -10,7 +10,7 @@
 ## 🚀 Quick Start
 
 ### 📱 Interactive Installation (Recommended)
-Visit the [Interactive Installer](https://htmlpreview.github.io/https://github.com/gl0bal01/bookmarklets/blob/main/install.html) for the easiest experience
+Visit the [Interactive Installer](https://htmlpreview.github.io/?https://github.com/gl0bal01/bookmarklets/blob/main/install.html) for the easiest experience
 
 <ins>Our enhanced installation page features:</ins>
 - **Drag & Drop Installation**: Simply drag buttons to your bookmark bar
