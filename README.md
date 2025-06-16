@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bookmarklets](https://img.shields.io/badge/bookmarklets-4+-blue.svg)](.)
 
-*"The trouble is, you think you have time."* - Make web investigation easier with these professional tools.
+*"The trouble is, you think you have time."* - Make web investigation easier with thesebookmarklets.
 
 ## 🚀 Quick Start
 
