@@ -1,31 +1,29 @@
-# 🔖 Bookmarklets Collection - gl0bal01
+# 🔖 Bookmarklets Collection
 
 > A curated collection of powerful JavaScript bookmarklets for OSINT, CTFs, and web research
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bookmarklets](https://img.shields.io/badge/bookmarklets-4+-blue.svg)](.)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 *"The trouble is, you think you have time."* - Make web investigation easier with these professional tools.
 
 ## 🚀 Quick Start
 
 ### 📱 Interactive Installation (Recommended)
-**[🔖 Professional Installer](install.html)** - Drag & Drop Installation
+Visit the [Interactive Installer](https://htmlpreview.github.io/https://github.com/gl0bal01/bookmarklets/blob/main/install.html) for the easiest experience
 
-Our enhanced installation page features:
+<ins>Our enhanced installation page features:</ins>
 - **Drag & Drop Installation**: Simply drag buttons to your bookmark bar
 - **Copy Code Option**: Manual installation with one-click copying
 - **Professional Interface**: Clean, modern design with search functionality
 - **Mobile Responsive**: Works perfectly on all devices
 
 ### 📖 Manual Installation
-1. Visit the [Interactive Installer](install.html) for the easiest experience
-2. Or browse individual bookmarklet folders (e.g., `bookmarklet-url-extractor/`)
-3. Copy the minified JavaScript code from the `.js` file
-4. Create a new bookmark in your browser
-5. Paste the code as the bookmark URL
-6. Click the bookmark on any webpage to activate
+1. Browse individual bookmarklet folders (e.g., `bookmarklet-url-extractor/`)
+2. Copy the minified JavaScript code from the `.js` file
+3. Create a new bookmark in your browser
+4. Paste the code as the bookmark URL
+5. Click the bookmark on any webpage to activate
 
 ## 📂 OSINT Tools Collection
 
@@ -63,34 +61,6 @@ Bookmarklets are small JavaScript programs stored as bookmarks in your browser. 
 - ✅ **Lightweight & fast** - Instant execution with minimal overhead
 - ✅ **Portable** - Easy to share and backup
 - ✅ **Professional grade** - Used by security researchers and investigators
-
-## 🔧 Browser Installation Guide
-
-### 🌐 Google Chrome / Microsoft Edge
-1. **Show bookmark bar**: Press `Ctrl+Shift+B` (Windows) or `Cmd+Shift+B` (Mac)
-2. **Drag to install**: Visit our [Interactive Installer](install.html) and drag buttons directly to bookmark bar
-3. **Alternative**: Right-click bookmark bar → "Add page" → Paste JavaScript code
-
-### 🦊 Firefox
-1. **Show bookmarks toolbar**: Press `Ctrl+Shift+B` (Windows) or `Cmd+Shift+B` (Mac)
-2. **Drag to install**: Drag buttons from our installer directly to toolbar
-3. **Alternative**: Right-click bookmark toolbar → "New Bookmark" → Paste code
-
-### 🧭 Safari
-1. **Show bookmarks bar**: View → Show Favorites Bar
-2. **Drag to install**: Drag buttons from installer to favorites bar
-3. **Alternative**: Bookmarks menu → "Add Bookmark" → Edit URL with JavaScript code
-
-### 📱 Mobile Installation
-**iOS Safari:** 
-1. Create any bookmark, then edit it
-2. Replace URL with bookmarklet JavaScript code
-3. Use our mobile-responsive installer for easier copying
-
-**Android Chrome:** 
-1. Visit `chrome://bookmarks/`
-2. Add bookmark with JavaScript code as URL
-3. Copy code from our installer's copy button
 
 ## 🏆 Use Cases & Applications
 
