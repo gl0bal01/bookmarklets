@@ -20,7 +20,7 @@ Visit the [Interactive Installer](https://htmlpreview.github.io/?https://github.
 
 ### 📖 Manual Installation
 1. Browse individual bookmarklet folders (e.g., `bookmarklet-url-extractor/`)
-2. Copy the minified JavaScript code from the `.js` file
+2. Copy the minified JavaScript code from at the bottom of the `.js` file
 3. Create a new bookmark in your browser
 4. Paste the code as the bookmark URL
 5. Click the bookmark on any webpage to activate
