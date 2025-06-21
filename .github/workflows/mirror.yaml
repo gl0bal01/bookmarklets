@@ -1,10 +1,11 @@
+
 name: Mirror to Codeberg
 on:
-  workflow_dispatch:    # Allows manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: '30 0 * * 0'  # Runs every Sunday at 00:30 UTC
+    - cron: '30 0 * * 0'
   push:
-    branches: [ main ]    # Also mirror on push (recommended)
+    branches: [ main ]
 
 jobs:
   codeberg:
@@ -12,8 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensures full git history
-      - uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url: git@codeberg.org:gl0bal01/bookmarklets.git
-          ssh_private_key: ${{ secrets.CODEBERG_SSH }}
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      - name: Mirror repository
+        run: |
+          git remote add codeberg https://gl0bal01:${{ secrets.CODEBERG_TOKEN }}@codeberg.org/gl0bal01/bookmarklets.git || true
+          git push codeberg --all --force
+          git push codeberg --tags --force
