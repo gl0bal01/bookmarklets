@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bookmarklets](https://img.shields.io/badge/bookmarklets-4+-blue.svg)](.)
+[![DOI](https://zenodo.org/badge/1001460201.svg)](https://doi.org/10.5281/zenodo.15722541)
 
 *"The trouble is, you think you have time."* - Make web investigation easier with thesebookmarklets.
 
