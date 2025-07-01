@@ -1,25 +1,38 @@
-
 name: Mirror to Codeberg
+
 on:
   workflow_dispatch:
   schedule:
     - cron: '30 0 * * 0'
   push:
-    branches: [ main ]
+    branches:
+      - main
+
+permissions:
+  contents: read    # you’re only reading from GH
 
 jobs:
-  codeberg:
+  mirror:
     runs-on: ubuntu-latest
+
+    # pull your Codeberg API token from secrets
+    env:
+      CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout full history
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Configure Git
+
+      - name: Configure Git author
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-      - name: Mirror repository
+
+      - name: Add Codeberg remote & push
         run: |
-          git remote add codeberg https://gl0bal01:${{ secrets.CODEBERG_TOKEN }}@codeberg.org/gl0bal01/bookmarklets.git || true
+          REMOTE="https://${CODEBERG_TOKEN}@codeberg.org/${{ github.repository }}.git"
+          git remote add codeberg "$REMOTE" || true
           git push codeberg --all --force
           git push codeberg --tags --force
