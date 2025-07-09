@@ -3,6 +3,7 @@ name: Update DOI and Citation
 on:
   release:
     types: [published]
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -19,15 +20,123 @@ jobs:
       - name: Wait for Zenodo processing
         run: sleep 300
 
+      - name: Get Zenodo DOI
+        id: zenodo-doi
+        run: |
+          # Replace YOUR_ZENODO_CONCEPT_ID with your actual Zenodo concept ID
+          # Find this in your Zenodo record's "Cite all versions" section
+          # Example: if Concept DOI is 10.5281/zenodo.1234567, use 1234567
+          CONCEPT_ID="15722541"
+
+          # Get the latest version DOI from Zenodo API
+          RESPONSE=$(curl -s "https://zenodo.org/api/records?q=conceptrecid:$CONCEPT_ID&sort=mostrecent")
+          
+          if [ -z "$RESPONSE" ] || [ "$RESPONSE" = "null" ]; then
+            echo "Empty response from Zenodo API"
+            exit 1
+          fi
+          
+          # Debug: show the response structure
+          echo "API Response structure:"
+          echo $RESPONSE | jq '.hits.hits[0] | {doi: .doi, metadata: .metadata.doi, conceptdoi: .conceptdoi}' || echo "Failed to parse response"
+          
+          # Extract DOI from the correct path in the response
+          DOI=$(echo $RESPONSE | jq -r '.hits.hits[0].doi // empty')
+          
+          # If the main DOI field is empty, try the metadata DOI
+          if [ -z "$DOI" ] || [ "$DOI" = "null" ]; then
+            DOI=$(echo $RESPONSE | jq -r '.hits.hits[0].metadata.doi // empty')
+          fi
+          
+          # If still empty, construct from the conceptdoi and record ID
+          if [ -z "$DOI" ] || [ "$DOI" = "null" ]; then
+            RECORD_ID=$(echo $RESPONSE | jq -r '.hits.hits[0].id // empty')
+            if [ -n "$RECORD_ID" ]; then
+              DOI="10.5281/zenodo.$RECORD_ID"
+            fi
+          fi
+          
+          if [ -z "$DOI" ] || [ "$DOI" = "null" ]; then
+            echo "Failed to get DOI from Zenodo API response"
+            echo "Response: $RESPONSE"
+            exit 1
+          fi
+          
+          echo "doi=$DOI" >> $GITHUB_OUTPUT
+          echo "Found DOI: $DOI"
+
       - name: Update CITATION.cff
         run: |
+          # Update version
           sed -i "s/^version:.*/version: ${{ github.event.release.tag_name }}/" CITATION.cff
+          
+          # Update date
           sed -i "s/^date-released:.*/date-released: $(date +%Y-%m-%d)/" CITATION.cff
+          
+          # Update DOI
+          sed -i "s|^doi:.*|doi: ${{ steps.zenodo-doi.outputs.doi }}|" CITATION.cff
+          
+          # If there's a preferred-citation section, update it too
+          if grep -q "preferred-citation:" CITATION.cff; then
+            sed -i "/preferred-citation:/,/^[^ ]/ { s/^  doi:.*/  doi: ${{ steps.zenodo-doi.outputs.doi }}/; s/^  version:.*/  version: ${{ github.event.release.tag_name }}/; s/^  date-released:.*/  date-released: $(date +%Y-%m-%d)/; }" CITATION.cff
+          fi
+
+      - name: Update README.md DOI badges
+        run: |
+          DOI="${{ steps.zenodo-doi.outputs.doi }}"
+          
+          # Update Zenodo DOI badge (common formats)
+          sed -i "s|https://zenodo.org/badge/DOI/[^)]*|https://zenodo.org/badge/DOI/$DOI|g" README.md
+          sed -i "s|https://doi.org/[0-9.]*/zenodo\.[0-9]*|https://doi.org/$DOI|g" README.md
+          
+          # Update any other DOI references in README
+          sed -i "s|10\.5281/zenodo\.[0-9]*|${DOI#https://doi.org/}|g" README.md
+
+      - name: Update package files (if they exist)
+        run: |
+          # Update package.json if it exists
+          if [ -f "package.json" ]; then
+            sed -i "s/\"version\": \"[^\"]*\"/\"version\": \"${{ github.event.release.tag_name }}\"/" package.json
+          fi
+          
+          # Update pyproject.toml if it exists
+          if [ -f "pyproject.toml" ]; then
+            sed -i "s/version = \"[^\"]*\"/version = \"${{ github.event.release.tag_name }}\"/" pyproject.toml
+          fi
+          
+          # Update setup.py if it exists
+          if [ -f "setup.py" ]; then
+            sed -i "s/version=['\"][^'\"]*['\"]/version='${{ github.event.release.tag_name }}'/" setup.py
+          fi
+
+      - name: Verify changes
+        run: |
+          echo "=== CITATION.cff changes ==="
+          git diff CITATION.cff || echo "No changes to CITATION.cff"
+          
+          echo "=== README.md changes ==="
+          git diff README.md || echo "No changes to README.md"
+          
+          echo "=== Other changes ==="
+          git diff --name-only | grep -v "CITATION.cff\|README.md" || echo "No other changes"
 
       - name: Commit changes
         run: |
-          git config --local user.name "GitHub Action"
-          git config --local user.email "action@github.com"
-          git add CITATION.cff
-          git commit -m "Update citation info for ${{ github.event.release.tag_name }}" || exit 0
-          git push
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Add all changed files
+          git add CITATION.cff README.md package.json pyproject.toml setup.py 2>/dev/null || true
+          
+          # Only commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Update DOI and version info for ${{ github.event.release.tag_name }}
+
+            - Updated CITATION.cff with new version, date, and DOI
+            - Updated README.md DOI badges
+            - Updated package version files
+            - DOI: ${{ steps.zenodo-doi.outputs.doi }}"
+            git push
+          else
+            echo "No changes to commit"
+          fi
