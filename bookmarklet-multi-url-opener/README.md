@@ -34,7 +34,7 @@ Instantly open multiple URLs from pasted text with intelligent detection and pro
 4. Name it "Multi-URL Opener" and save
 
 ### Method 2: Drag & Drop Installation
-1. Visit the [installation page](../../install.html)
+1. Visit the [installation page](../install.html)
 2. Drag the "Multi-URL Opener" button to your bookmarks bar
 3. Ready to use!
 
@@ -138,7 +138,7 @@ www.reddit.com
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](../../CONTRIBUTING.md) for details on:
+We welcome contributions! Please see our [Contributing Guidelines](../CONTRIBUTING.md) for details on:
 - Code standards and style requirements
 - Testing procedures for new features
 - Documentation requirements
@@ -182,7 +182,7 @@ We welcome contributions! Please see our [Contributing Guidelines](../../CONTRIB
 
 ## 📄 License
 
-MIT License - see [LICENSE](../../LICENSE) file for details.
+MIT License - see [LICENSE](../LICENSE) file for details.
 
 ---
 

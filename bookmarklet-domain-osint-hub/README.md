@@ -182,11 +182,6 @@ We welcome contributions! Please see [CONTRIBUTING.md](../../CONTRIBUTING.md) fo
 **Edge**
 - Full compatibility with all features
 - SmartScreen may occasionally flag external OSINT sites
-
-## 📄 License
-
-MIT License - see [LICENSE](../../LICENSE) file for details.
-
 ---
 
 **Made with ❤️ for security researchers, digital investigators, and OSINT professionals**
