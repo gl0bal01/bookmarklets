@@ -3,7 +3,7 @@
 > A curated collection of powerful JavaScript bookmarklets for OSINT, CTFs, and web research
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Bookmarklets](https://img.shields.io/badge/bookmarklets-4+-blue.svg)](.)
+[![Bookmarklets](https://img.shields.io/badge/bookmarklets-6+-blue.svg)](.)
 [![DOI](https://zenodo.org/badge/1001460201.svg)](https://doi.org/10.5281/zenodo.15722541)
 [![GitHub](https://img.shields.io/badge/GitHub-gl0bal01-181717?logo=github&logoColor=white)](https://github.com/gl0bal01)
 
@@ -38,6 +38,8 @@ Visit the [Interactive Installer](https://htmlpreview.github.io/?https://github.
 | [**🔗 URLs Extractor**](bookmarklet-url-extractor/) | Advanced URL extraction tool that creates both TXT and HTML reports with detailed analysis | Links & resources extraction, searchable HTML reports, Base64 content handling, TXT & HTML outputs, statistics |
 | [**🖼️ Enhanced Image Downloader**](bookmarklet-image-batch-dl/) | Advanced image downloader with size filtering, auto-scrolling, and comprehensive metadata | Interactive size filtering, auto-scroll lazy loading, selective download interface, original filename preservation, README generation |
 | [**📄 LinkedIn OSINT Extractor**](bookmarklet-linkedin-osint-extractor/) | Advanced LinkedIn OSINT tool that extracts comprehensive post and comment data with detailed analysis | Post & author extraction, precise timestamps, TXT/JSON/HTML/CSV reports, engagement metrics, top commenters analysis |
+| [**🔍 OSINT Person Finder**](bookmarklet-osint-person-finder/) | Advanced OSINT tool for finding people using Google dorks, usernames, and comprehensive search across multiple databases and social platforms | Dual search modes (name/username), 50+ Google dorks, multi-engine support, people database integration, VPN recommendations, batch URL opening, TXT/JSON/HTML export |
+| [**🕵️ Website Recon Scanner**](bookmarklet-website-recon-scanner/) | Comprehensive website intelligence gathering tool for OSINT investigations | Discovery files analysis, technology stack detection, meta info extraction, security headers analysis, API endpoint detection, well-known directory exploration, professional reports |
 
 ## ⭐ Featured Bookmarklet
 
