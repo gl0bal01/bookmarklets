@@ -1,104 +1,53 @@
-# 🔖 Bookmarklets Collection
+# Bookmarklets for OSINT & Investigations
 
-> A curated collection of powerful JavaScript bookmarklets for OSINT, CTFs, and web research
+> 9 lightweight JavaScript bookmarklets for OSINT, security research, and CTF competitions. No installation required. Zero external calls. All code runs locally in your browser.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Bookmarklets](https://img.shields.io/badge/bookmarklets-6+-blue.svg)](.)
+[![Bookmarklets](https://img.shields.io/badge/bookmarklets-9-blue.svg)](.)
 [![DOI](https://zenodo.org/badge/1001460201.svg)](https://doi.org/10.5281/zenodo.15722541)
-[![GitHub](https://img.shields.io/badge/GitHub-gl0bal01-181717?logo=github&logoColor=white)](https://github.com/gl0bal01)
 
-*"The trouble is, you think you have time."* - Make web investigation easier with thesebookmarklets.
+## Why Bookmarklets?
 
-## 🚀 Quick Start
+Browser extensions require installation, permissions, and trust. Bookmarklets are different:
 
-### 📱 Interactive Installation (Recommended)
-Visit the [Interactive Installer](https://htmlpreview.github.io/?https://github.com/gl0bal01/bookmarklets/blob/main/install.html) for the easiest experience
+- **No install** — drag to your bookmark bar and click to run
+- **No permissions** — no access to browsing history, tabs, or other data
+- **No tracking** — all code runs locally, nothing is sent to external servers
+- **Portable** — works in any browser, easy to share, inspect, and audit
+- **Transparent** — the entire source is visible JavaScript you can read
 
-<ins>Our enhanced installation page features:</ins>
-- **Drag & Drop Installation**: Simply drag buttons to your bookmark bar
-- **Copy Code Option**: Manual installation with one-click copying
-- **Professional Interface**: Clean, modern design with search functionality
-- **Mobile Responsive**: Works perfectly on all devices
+## Quick Start
 
-### 📖 Manual Installation
-1. Browse individual bookmarklet folders (e.g., `bookmarklet-url-extractor/`)
-2. Copy the minified JavaScript code at the bottom of the `.js` file
-3. Create a new bookmark in your browser
-4. Paste the code as the bookmark URL
-5. Click the bookmark on any webpage to activate
+**Option 1:** Visit the [Interactive Installer](https://htmlpreview.github.io/?https://github.com/gl0bal01/bookmarklets/blob/main/install.html) — drag and drop buttons to your bookmark bar.
 
-## 📂 OSINT Tools Collection
+**Option 2:** Browse individual bookmarklet folders, copy the minified JavaScript from the `.js` file, and save it as a bookmark URL.
 
-### 🕵️‍♂️ Essential OSINT & Web Analysis Tools
-*"Better than a thousand hollow words, is one word that brings peace. These tools aim to bring clarity to the complex digital world."*
+## Tools
 
-| Tool | Description | Key Features |
-|------|-------------|--------------|
-| [**🔍 Expose Hidden Content**](bookmarklet-expose-hidden/) | Reveals hidden HTML comments and concealed elements for thorough content analysis | Comments highlighting, hidden elements, color-coded display, interactive control panel, non-destructive analysis |
-| [**🔗 URLs Extractor**](bookmarklet-url-extractor/) | Advanced URL extraction tool that creates both TXT and HTML reports with detailed analysis | Links & resources extraction, searchable HTML reports, Base64 content handling, TXT & HTML outputs, statistics |
-| [**🖼️ Enhanced Image Downloader**](bookmarklet-image-batch-dl/) | Advanced image downloader with size filtering, auto-scrolling, and comprehensive metadata | Interactive size filtering, auto-scroll lazy loading, selective download interface, original filename preservation, README generation |
-| [**📄 LinkedIn OSINT Extractor**](bookmarklet-linkedin-osint-extractor/) | Advanced LinkedIn OSINT tool that extracts comprehensive post and comment data with detailed analysis | Post & author extraction, precise timestamps, TXT/JSON/HTML/CSV reports, engagement metrics, top commenters analysis |
-| [**🔍 OSINT Person Finder**](bookmarklet-osint-person-finder/) | Advanced OSINT tool for finding people using Google dorks, usernames, and comprehensive search across multiple databases and social platforms | Dual search modes (name/username), 50+ Google dorks, multi-engine support, people database integration, VPN recommendations, batch URL opening, TXT/JSON/HTML export |
-| [**🕵️ Website Recon Scanner**](bookmarklet-website-recon-scanner/) | Comprehensive website intelligence gathering tool for OSINT investigations | Discovery files analysis, technology stack detection, meta info extraction, security headers analysis, API endpoint detection, well-known directory exploration, professional reports |
+| Tool | Description |
+|------|-------------|
+| [LinkedIn OSINT Extractor](bookmarklet-linkedin-osint-extractor/) | Extract posts, comments, timestamps, and engagement metrics from LinkedIn. Export as TXT, JSON, HTML, or CSV. |
+| [Domain OSINT Hub](bookmarklet-domain-osint-hub/) | Launch 18+ OSINT services for any domain with one click. Preset system for common workflows. |
+| [Expose Hidden Content](bookmarklet-expose-hidden/) | Reveal HTML comments, hidden elements, and concealed content with color-coded highlighting. |
+| [URLs Extractor](bookmarklet-url-extractor/) | Extract all links and resources from a page. Generates searchable HTML and TXT reports. Handles Base64 content. |
+| [Enhanced Image Downloader](bookmarklet-image-batch-dl/) | Download images with size filtering, auto-scrolling for lazy-loaded content, and metadata generation. |
+| [Username Generator](bookmarklet-username-generator/) | Generate 500+ username variations from a name for cross-platform OSINT searches. |
+| [Multi-URL Opener](bookmarklet-multi-url-opener/) | Paste a list of URLs and open them all at once. Smart detection and protocol correction. |
+| [Website Recon Scanner](bookmarklet-website-recon-scanner/) | Scan 80+ paths for sensitive files, security headers, technologies, social links, and contacts. Export TXT/JSON/HTML. |
+| [Vessel Tracker](bookmarklet-vessel-tracker/) | Generate tracking links across maritime platforms using IMO, MMSI, or vessel name. |
 
-## ⭐ Featured Bookmarklet
+## Use Cases
 
-### 📄 LinkedIn OSINT Extractor
-Professional-grade OSINT tool for comprehensive LinkedIn data extraction. Extracts posts, comments, user profiles, and engagement metrics with precise timestamp calculation and multiple export formats.
+**OSINT Investigations** — Social media data extraction, profile analysis, timeline mapping, domain reconnaissance.
 
-**Professional Features:**
-- Comprehensive post and comment extraction
-- Precise UTC timestamp calculation from LinkedIn IDs
-- Multiple export formats (TXT, JSON, HTML, CSV)
-- User engagement analysis and metrics
-- Top commenters identification and ranking
-- Chronological timeline generation
+**CTF Competitions** — Hidden element discovery, HTML comment analysis, URL and resource extraction.
 
-## 💡 What are Bookmarklets?
+**Security Research** — Web application testing, content analysis, hidden information discovery.
 
-Bookmarklets are small JavaScript programs stored as bookmarks in your browser. When clicked, they run on the current webpage to add functionality, extract information, or modify the page's behavior.
+## License
 
-**Advantages:**
-- ✅ **No installation required** - No browser extensions needed
-- ✅ **Universal compatibility** - Work on any website and browser
-- ✅ **Privacy-friendly** - Run entirely locally in your browser
-- ✅ **Lightweight & fast** - Instant execution with minimal overhead
-- ✅ **Portable** - Easy to share and backup
-- ✅ **Professional grade** - Used by security researchers and investigators
+MIT License — see [LICENSE](LICENSE) for details.
 
-## 🏆 Use Cases & Applications
+## Contributing
 
-### 🔒 Security Research
-- Web application security testing
-- Content analysis and investigation
-- Hidden information discovery
-- Social media intelligence gathering
-
-### 🎯 CTF Competitions
-- HTML comment and metadata analysis
-- Hidden element revelation
-- URL and resource extraction
-- Data forensics and investigation
-
-### 📊 OSINT Investigations
-- Social media data extraction
-- Profile and engagement analysis
-- Comprehensive reporting and documentation
-- Timeline and relationship mapping
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌟 Show Your Support
-
-If you find this collection valuable for your OSINT, security research, or CTF activities:
-
-- ⭐ **Star this repository** to help others discover these tools
-- 🔄 **Share with your community** - Security researchers, CTF teams, OSINT analysts
-- 🤝 **Contribute** new bookmarklets or improvements
-- 📢 **Spread the word** on social media and forums
-
----
-
-**Made with ❤️ for the OSINT and security research community**
+Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.

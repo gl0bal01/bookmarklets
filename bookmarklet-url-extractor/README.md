@@ -209,7 +209,3 @@ This project is licensed under the MIT License.
 
 ---
 
-**⭐ Star this repository if you find it useful!**
-
-**Made with ❤️ for ctf players, web investigators and developers**
-

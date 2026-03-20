@@ -54,7 +54,7 @@ A powerful bookmarklet that extracts comprehensive comment data, user profiles, 
 ## 🎮 Usage
 
 ### For Link Posts (Full Extraction)
-![LinkedIn Post ativity](/assets/screenshots/linkdin-post-activity.png)
+![LinkedIn Post Activity](/assets/screenshots/linkdin-post-activity.png)
 1. **Open a LinkedIn link post** (e.g., `linkedin.com/posts/username_content-activity-123456-xyz`)
 2. **Scroll to load all comments** you want to extract
 3. **Click the bookmarklet**

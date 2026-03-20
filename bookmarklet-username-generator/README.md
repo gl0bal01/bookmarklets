@@ -52,7 +52,7 @@ Generate comprehensive username variations with flexible input options - now in 
 4. Name it "Username Generator" and save
 
 ### Method 2: Drag & Drop Installation
-1. Visit the [installation page](../../install.html)
+1. Visit the [installation page](../install.html)
 2. Drag the "Username Generator" button to your bookmarks bar
 3. Ready to use!
 
@@ -156,7 +156,7 @@ Result: Combines John + parsed "jd" + "corp" patterns
 
 ## 🤝 Contributing
 
-Contributions welcome! Please see the main repository's [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
+Contributions welcome! Please see the main repository's [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
 
 ### Ideas for Enhancement
 - Additional number patterns (birth years, etc.)

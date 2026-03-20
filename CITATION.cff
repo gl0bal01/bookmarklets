@@ -1,13 +1,10 @@
 cff-version: 1.2.0
-title: "Bookmarks for OSINT & Investigations"
+title: "Bookmarklets for OSINT & Investigations"
 message: "If you use this software, please cite it using the metadata from this file."
 type: software
 authors:
-  - given-names: "gl0bal01"
-    alias: "gl0bal01" 
+  - alias: "gl0bal01"
     orcid: "https://orcid.org/0009-0003-0062-4876"
-    given-names: "Fabien"
-    family-names: "Grenier"
 repository-code: "https://github.com/gl0bal01/bookmarklets"
 url: "https://github.com/gl0bal01/bookmarklets"
 abstract: >-
@@ -21,7 +18,7 @@ keywords:
   - "URL Extractor"
   - "Image downloader"
 license: MIT
-version: "1.0.0"
-date-released: "2025-06-23"
+version: "2.0.0"
+date-released: "2026-03-20"
 doi: "10.5281/zenodo.15722542"
 commit: "main"

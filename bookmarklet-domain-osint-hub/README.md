@@ -42,7 +42,7 @@ It also includes a powerful report generation system that transforms your invest
 5. Save the bookmark
 
 ### Method 2: Drag and Drop (from install.html)
-1. Visit the [installation page](../../install.html)
+1. Visit the [installation page](../install.html)
 2. Drag the "Domain OSINT Hub" button to your bookmarks bar
 3. The bookmarklet will be automatically installed
 
@@ -131,7 +131,7 @@ The bookmarklet implements sophisticated popup handling:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please see [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
 
 ### Development Setup
 1. Fork the repository
