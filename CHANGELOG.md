@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-06-05
+- Added TripAdvisor Review Extractor bookmarklet (v1.0.0)
 - Added Google Maps Review Extractor bookmarklet (v1.0.0)
 
 ## 2026-03-20

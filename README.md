@@ -1,9 +1,9 @@
 # Bookmarklets for OSINT & Investigations
 
-> 10 lightweight JavaScript bookmarklets for OSINT, security research, and CTF competitions. No browser extension installation required. Source code is readable and auditable.
+> 11 lightweight JavaScript bookmarklets for OSINT, security research, and CTF competitions. No browser extension installation required. Source code is readable and auditable.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Bookmarklets](https://img.shields.io/badge/bookmarklets-10-blue.svg)](.)
+[![Bookmarklets](https://img.shields.io/badge/bookmarklets-11-blue.svg)](.)
 [![DOI](https://zenodo.org/badge/1001460201.svg)](https://doi.org/10.5281/zenodo.15722541)
 
 ## Why Bookmarklets?
@@ -36,6 +36,7 @@ Browser extensions require installation and explicit permission grants. Bookmark
 | [Website Recon Scanner](bookmarklet-website-recon-scanner/) | Scan 80+ paths for sensitive files, security headers, technologies, social links, and contacts. Export TXT/JSON/HTML. |
 | [Vessel Tracker](bookmarklet-vessel-tracker/) | Generate tracking links across maritime platforms using IMO, MMSI, or vessel name. |
 | [Google Maps Review Extractor](bookmarklet-google-maps-review-extractor/) | Extract Google Maps reviews (reviewer, rating, exact network timestamps) with auto-scroll and dedup. Export a searchable, sortable HTML report. |
+| [TripAdvisor Review Extractor](bookmarklet-tripadvisor-review-extractor/) | Extract TripAdvisor reviews across all languages (reviewer, location, rating, visit + review dates) via same-origin pagination and dedup. Export a searchable, sortable HTML report. |
 
 ## Use Cases
 
