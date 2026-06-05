@@ -3,7 +3,8 @@ title: "Bookmarklets for OSINT & Investigations"
 message: "If you use this software, please cite it using the metadata from this file."
 type: software
 authors:
-  - alias: "gl0bal01"
+  - family-names: "gl0bal01"
+    alias: "gl0bal01"
     orcid: "https://orcid.org/0009-0003-0062-4876"
 repository-code: "https://github.com/gl0bal01/bookmarklets"
 url: "https://github.com/gl0bal01/bookmarklets"
