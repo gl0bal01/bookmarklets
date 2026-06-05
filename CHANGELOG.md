@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-06-05
+- Added Google Maps Review Extractor bookmarklet (v1.0.0)
+
 ## 2026-03-20
 - Added Website Recon Scanner bookmarklet (v2.0.0)
 - Restructured README for clarity

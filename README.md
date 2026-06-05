@@ -1,20 +1,20 @@
 # Bookmarklets for OSINT & Investigations
 
-> 9 lightweight JavaScript bookmarklets for OSINT, security research, and CTF competitions. No installation required. Zero external calls. All code runs locally in your browser.
+> 10 lightweight JavaScript bookmarklets for OSINT, security research, and CTF competitions. No browser extension installation required. Source code is readable and auditable.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Bookmarklets](https://img.shields.io/badge/bookmarklets-9-blue.svg)](.)
+[![Bookmarklets](https://img.shields.io/badge/bookmarklets-10-blue.svg)](.)
 [![DOI](https://zenodo.org/badge/1001460201.svg)](https://doi.org/10.5281/zenodo.15722541)
 
 ## Why Bookmarklets?
 
-Browser extensions require installation, permissions, and trust. Bookmarklets are different:
+Browser extensions require installation and explicit permission grants. Bookmarklets work differently:
 
 - **No install** — drag to your bookmark bar and click to run
-- **No permissions** — no access to browsing history, tabs, or other data
-- **No tracking** — all code runs locally, nothing is sent to external servers
+- **No extension permissions** — no access to browser APIs like history, tabs, or cross-site data. Note: bookmarklets do execute with the same privileges as the active page, including access to its DOM, cookies, and session data
+- **No external calls by design** — these bookmarklets are written to process data locally in the browser. You can verify this by reviewing the source code, which is intentionally kept readable
 - **Portable** — works in any browser, easy to share, inspect, and audit
-- **Transparent** — the entire source is visible JavaScript you can read
+- **Transparent** — the entire source is visible JavaScript you can read before running
 
 ## Quick Start
 
@@ -26,7 +26,7 @@ Browser extensions require installation, permissions, and trust. Bookmarklets ar
 
 | Tool | Description |
 |------|-------------|
-| [LinkedIn OSINT Extractor](bookmarklet-linkedin-osint-extractor/) | Extract posts, comments, timestamps, and engagement metrics from LinkedIn. Export as TXT, JSON, HTML, or CSV. |
+| [LinkedIn OSINT Extractor](bookmarklet-linkedin-osint-extractor/) | Attempt to extract posts, comments, timestamps, and engagement metrics from LinkedIn via DOM parsing. Export as TXT, JSON, HTML, or CSV. May break when LinkedIn changes its page structure. |
 | [Domain OSINT Hub](bookmarklet-domain-osint-hub/) | Launch 18+ OSINT services for any domain with one click. Preset system for common workflows. |
 | [Expose Hidden Content](bookmarklet-expose-hidden/) | Reveal HTML comments, hidden elements, and concealed content with color-coded highlighting. |
 | [URLs Extractor](bookmarklet-url-extractor/) | Extract all links and resources from a page. Generates searchable HTML and TXT reports. Handles Base64 content. |
@@ -35,10 +35,11 @@ Browser extensions require installation, permissions, and trust. Bookmarklets ar
 | [Multi-URL Opener](bookmarklet-multi-url-opener/) | Paste a list of URLs and open them all at once. Smart detection and protocol correction. |
 | [Website Recon Scanner](bookmarklet-website-recon-scanner/) | Scan 80+ paths for sensitive files, security headers, technologies, social links, and contacts. Export TXT/JSON/HTML. |
 | [Vessel Tracker](bookmarklet-vessel-tracker/) | Generate tracking links across maritime platforms using IMO, MMSI, or vessel name. |
+| [Google Maps Review Extractor](bookmarklet-google-maps-review-extractor/) | Extract Google Maps reviews (reviewer, rating, exact network timestamps) with auto-scroll and dedup. Export a searchable, sortable HTML report. |
 
 ## Use Cases
 
-**OSINT Investigations** — Social media data extraction, profile analysis, timeline mapping, domain reconnaissance.
+**OSINT Investigations** — Social media data parsing (results depend on current site structure), profile analysis, timeline mapping, domain reconnaissance.
 
 **CTF Competitions** — Hidden element discovery, HTML comment analysis, URL and resource extraction.
 
